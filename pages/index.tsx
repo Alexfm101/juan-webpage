@@ -1,7 +1,7 @@
 
 export default function Home() {
     return (
-        <div>
+        <div className="bg-blue-400 flex justify-center">
             hola juan
         </div>
     ) 
