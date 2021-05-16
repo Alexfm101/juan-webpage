@@ -1,3 +1,9 @@
+import  Navbar  from "../components/Navbar";
+
 export default function Home() {
-	return <div className="bg-blue-400 flex justify-center">hola juan</div>;
+	return (
+		<div className="">
+			<Navbar/>
+		</div>
+	);
 }
