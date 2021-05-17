@@ -1,9 +1,20 @@
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app';
+import Footer from '../components/Footer';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<head>
+				<link rel="preconnect" href="https://fonts.gstatic.com"/>
+				<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet"/>
+			</head>
+			
+			<Component {...pageProps} />
+			<Footer/>
+		</>
+	);
 }
 
 // Only uncomment this method if you have blocking data requirements for
