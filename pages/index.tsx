@@ -3,11 +3,7 @@ import  Navbar  from "../components/Navbar";
 
 export default function Home() {
 	return (
-		<div>
-			<head>
-				<link rel="preconnect" href="https://fonts.gstatic.com"/>
-				<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet"/>
-			</head>
+		<>
 
 			<Navbar/>
 			{/* portada */}
@@ -63,7 +59,6 @@ export default function Home() {
 				</div>
 			</div>
 
-			<Footer/>
-		</div>
+		</>
 	);
 }

@@ -9,7 +9,11 @@ export default function Navbar() {
             <div className="max-w-screen-xl mx-auto ">
                 <nav className=" w-full md:w-auto p-2 md:mx-2">
                     <div className="flex justify-between">
-                        <img className={` h-10 ${ isOpen ? 'invisible' : ''} `} src="/svgs/logo.svg" alt="" />
+                        <Link href="/">
+                            <a href="">
+                                <img className={` h-10 ${ isOpen ? 'invisible' : ''} `} src="/svgs/logo.svg" alt="" />
+                            </a>
+                        </Link>
                         <button className="focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
                             <img className={`  ${ isOpen ? 'hidden' : ''}`} src='/svgs/menu.svg' alt="" />
                             <img className={`  ${ isOpen ? '' : 'hidden'}`} src='/svgs/close.svg' alt="" />
