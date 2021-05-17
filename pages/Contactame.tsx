@@ -1,9 +1,10 @@
-
+import Navbar from '../components/Navbar';
 
 export default function Contactame() {
-    return (
-        <div>
-            Contactame
-        </div>
-    );
+	return (
+		<>
+			<Navbar />
+			Contactame
+		</>
+	);
 }

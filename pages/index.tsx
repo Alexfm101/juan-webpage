@@ -1,31 +1,31 @@
-import Footer from "../components/Footer";
-import  Navbar  from "../components/Navbar";
+import Navbar from '../components/Navbar';
 
 export default function Home() {
 	return (
 		<>
-
-			<Navbar/>
+			<Navbar />
 			{/* portada */}
-			<div className="flex flex-col p-10 justify-center items-center">
-				<h1 className="text-4xl font-bold  font-Comfortaa text-gray-900">Fraum</h1>
-				<h2 className=" text-base font-normal text-gray-500 font-Comfortaa">Artista Digital y Fotografo</h2>
+			<div className="flex flex-col p-10  mt-10 justify-center items-center">
+				<h1 className="text-4xl font-bold  font-Comfortaa text-gray-900">
+					Fraum
+				</h1>
+				<h2 className=" text-base font-normal text-gray-500 font-Comfortaa">
+					Artista Digital y Fotografo
+				</h2>
 			</div>
 			{/* quien soy */}
 			<div className="flex flex-col justify-center items-center">
 				<h1 className="text-lg font-bold text-gray-600">Quien soy?</h1>
 				<div className="flex flex-col justify-center items-center px-4">
-					<p className="font-Comfortaa">
-						Hey! mi nombre es Juan.
-					</p>
+					<p className="font-Comfortaa">Hey! mi nombre es Juan.</p>
 					<p className="font-Comfortaa">
 						Soy Fotografo y Artista Digital.
 					</p>
-					<p className="font-Comfortaa">
-						Vivo en Venezuela.
-					</p>
+					<p className="font-Comfortaa">Vivo en Venezuela.</p>
 					<p className="text-justify font-Comfortaa">
-						Mientras estudio una licenciatura en artes, me dedico al arte digital y fotografiar  momentos iconicos dentro de la fotografia de moda y retratos.
+						Mientras estudio una licenciatura en artes, me dedico al
+						arte digital y fotografiar momentos iconicos dentro de
+						la fotografia de moda y retratos.
 					</p>
 				</div>
 				<div className="mt-10">
@@ -43,7 +43,9 @@ export default function Home() {
 			</div>
 			{/* que se hacer */}
 			<div className="mt-20 flex flex-col justify-center items-center">
-				<h1 className="text-lg font-bold text-gray-600">Chequea mi Portafolio</h1>
+				<h1 className="text-lg font-bold text-gray-600">
+					Chequea mi Portafolio
+				</h1>
 				<div className="w-full mt-10">
 					<div className="flex relative justify-center">
 						<div className="absolute z-0 border-2 border-gray-900 shadow-2xl bg-black w-48 h-72 rounded-xl " />
@@ -53,12 +55,13 @@ export default function Home() {
 							alt=""
 						/>
 						<div className="absolute mt-28 ">
-							<h1 className=" font-bold text-gray-100 ">fotografia</h1>
+							<h1 className=" font-bold text-gray-100 ">
+								fotografia
+							</h1>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</>
 	);
 }

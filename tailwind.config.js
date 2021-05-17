@@ -7,7 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'Comfortaa':['Comfortaa', 'sans-serif'],
+				Comfortaa: ['Comfortaa', 'sans-serif'],
 			},
 		},
 	},

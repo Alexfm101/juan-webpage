@@ -1,9 +1,10 @@
-
+import Navbar from '../components/Navbar';
 
 export default function Portafolio() {
-    return (
-        <div>
-            Portafolio   
-        </div>
-    );
+	return (
+		<>
+			<Navbar />
+			Portafolio
+		</>
+	);
 }
