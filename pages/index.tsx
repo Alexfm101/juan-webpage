@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 
 export default function Home() {
-
 	return (
 		<>
 			<Navbar />
@@ -36,7 +35,7 @@ export default function Home() {
 							<img
 								className="absolute rounded-xl h-72 shadow-xl transform translate-x-5"
 								src="/images/test.jpg"
-								alt="Luis Güette photo"
+								alt="Juan Photo"
 							/>
 						</div>
 					</div>
