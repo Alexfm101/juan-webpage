@@ -13,6 +13,7 @@ export default function Home() {
 					Artista Digital y Fotografo
 				</h2>
 			</div>
+			  			
 			{/* quien soy */}
 			<div className="flex flex-col justify-center items-center">
 				<h1 className="text-lg font-bold text-gray-600">Quien soy?</h1>
@@ -58,6 +59,7 @@ export default function Home() {
 							<h1 className=" font-bold text-gray-100 ">
 								fotografia
 							</h1>
+
 						</div>
 					</div>
 				</div>
