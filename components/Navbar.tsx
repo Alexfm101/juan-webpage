@@ -6,14 +6,14 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className="max-w-screen-xl mx-auto ">
-				<nav className=" w-full md:w-auto p-2 md:mx-2">
+			<header className="max-w-screen-xl mx-auto ">
+				<nav className=" w-full p-4 md:p-6">
 					<div className="flex justify-between">
 						<Link href="/">
 							<a href="">
 								<img
-									className={` h-10 ${
-										isOpen ? 'invisible' : ''
+									className={` h-10 md:h-14 lg:h-16 ${
+										isOpen ? 'invisible md:visible' : ''
 									} `}
 									src="/svgs/logo.svg"
 									alt=""
@@ -35,12 +35,14 @@ export default function Navbar() {
 								alt=""
 							/>
 						</button>
+
+						{/* desktop style */}
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
 								<li>
 									<Link href="/Portafolio">
 										<a
-											className="font-bold text-gray-800"
+											className="font-bold text-gray-900 md:hover:text-red-500"
 											href=""
 										>
 											Portafolio
@@ -50,7 +52,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Bibliografia">
 										<a
-											className="font-bold text-gray-800"
+											className="font-bold text-gray-900 md:hover:text-red-500"
 											href=""
 										>
 											Bibliografia
@@ -60,7 +62,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Contactame">
 										<a
-											className="font-bold text-gray-800"
+											className="font-bold text-gray-900 md:hover:text-red-500"
 											href=""
 										>
 											Contactame
@@ -70,6 +72,8 @@ export default function Navbar() {
 							</ul>
 						</div>
 					</div>
+
+					{/* mobile style */}
 					<div
 						className={`flex justify-center md:hidden ${
 							isOpen ? '' : 'hidden'
@@ -79,7 +83,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Portafolio">
 									<a
-										className="font-bold text-gray-800"
+										className="font-bold text-gray-900 md:hover:text-red-500"
 										href=""
 									>
 										Portafolio
@@ -89,7 +93,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Bibliografia">
 									<a
-										className="font-bold text-gray-800"
+										className="font-bold text-gray-900 md:hover:text-red-500"
 										href=""
 									>
 										Bibliografia
@@ -99,7 +103,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Contactame">
 									<a
-										className="font-bold text-gray-800"
+										className="font-bold text-gray-900 md:hover:text-red-500"
 										href=""
 									>
 										Contactame
@@ -109,7 +113,7 @@ export default function Navbar() {
 						</ul>
 					</div>
 				</nav>
-			</div>
+			</header>
 		</>
 	);
 }
