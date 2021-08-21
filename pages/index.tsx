@@ -3,38 +3,27 @@ import Navbar from '../components/Navbar';
 export default function Home() {
 	return (
 		<>
-			<Navbar />
 			{/* portada */}
-			<div className="flex flex-col p-10  mt-10 justify-center items-center">
-				<h1 className="text-4xl font-bold  font-Comfortaa text-gray-900">
-					Fraum
-				</h1>
-				<h2 className=" text-base font-normal text-gray-500 font-Comfortaa">
-					Artista Digital y Fotografo
-				</h2>
-			</div>
-			  			
-			{/* quien soy */}
-			<div className="flex flex-col justify-center items-center">
-				<h1 className="text-lg font-bold text-gray-600">Quien soy?</h1>
-				<div className="flex flex-col justify-center items-center px-4">
-					<p className="font-Comfortaa">Hey! mi nombre es Juan.</p>
-					<p className="font-Comfortaa">
-						Soy Fotografo y Artista Digital.
-					</p>
-					<p className="font-Comfortaa">Vivo en Venezuela.</p>
-					<p className="text-justify font-Comfortaa">
-						Mientras estudio una licenciatura en artes, me dedico al
-						arte digital y fotografiar momentos iconicos dentro de
-						la fotografia de moda y retratos.
-					</p>
+			<div className="text-center py-20 px-5">
+				<div className="absolute inset-x-0 top-0">
+                        <Navbar/>
 				</div>
-				<div className="mt-10">
-					<div className="w-full">
-						<div className="relative h-72 w-72 flex justify-center">
-							<div className="absolute z-0 mt-4 border-2 border-gray-900 w-52 h-72 rounded-xl " />
+				<div className="lg:grid lg:grid-cols-2 lg:mt-10 lg:p-10 2xl:max-w-6xl 2xl:mx-auto">
+					<div className="py-10 lg:relative">
+						<div className="lg:absolute lg:inset-x-0">
+							<h1 className="text-4xl font-bold font-Comforta lg:text-5xl">
+								Hola soy Fraum
+							</h1>
+							<h2 className="text-base font-medium text-gray-500 font-Comfortaa lg:mt-2 lg:text-lg">
+								Artista Digital y Fotografo
+							</h2>
+						</div>
+					</div>
+					<div className="">
+						<div className="relative h-72 w-72 mx-auto">
+							<div className="absolute z-0 mt-4 border-2 border-black w-52 h-80 rounded-xl transform translate-x-5"/>
 							<img
-								className="absolute rounded-xl h-72 shadow-xl transform translate-x-5"
+								className="absolute rounded-xl h-80 shadow-xl transform translate-x-10"
 								src="/images/test.jpg"
 								alt="Juan Photo"
 							/>
@@ -42,28 +31,8 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			{/* que se hacer */}
-			<div className="mt-20 flex flex-col justify-center items-center">
-				<h1 className="text-lg font-bold text-gray-600">
-					Chequea mi Portafolio
-				</h1>
-				<div className="w-full mt-10">
-					<div className="flex relative justify-center">
-						<div className="absolute z-0 border-2 border-gray-900 shadow-2xl bg-black w-48 h-72 rounded-xl " />
-						<img
-							className=" rounded-xl h-72 opacity-50  shadow-2xl "
-							src="/images/test.jpg"
-							alt=""
-						/>
-						<div className="absolute mt-28 ">
-							<h1 className=" font-bold text-gray-100 ">
-								fotografia
-							</h1>
 
-						</div>
-					</div>
-				</div>
-			</div>
+			{/* que se hacer */}
 		</>
 	);
 }
