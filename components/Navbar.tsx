@@ -42,7 +42,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Portafolio">
 										<a
-											className="font-bold text-gray-900 md:hover:text-red-500"
+											className="font-bold md:hover:text-red-500"
 											href=""
 										>
 											Portafolio
@@ -52,7 +52,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Bibliografia">
 										<a
-											className="font-bold text-gray-900 md:hover:text-red-500"
+											className="font-bold md:hover:text-red-500"
 											href=""
 										>
 											Bibliografia
@@ -62,7 +62,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Contactame">
 										<a
-											className="font-bold text-gray-900 md:hover:text-red-500"
+											className="font-bold md:hover:text-red-500"
 											href=""
 										>
 											Contactame
@@ -75,15 +75,15 @@ export default function Navbar() {
 
 					{/* mobile style */}
 					<div
-						className={`flex justify-center md:hidden ${
+						className={`flex justify-center md:hidden p-4 rounded-lg shadow-2xl bg-gray-100 ${
 							isOpen ? '' : 'hidden'
 						}`}
 					>
-						<ul className="space-y-2">
+						<ul className="space-y-3">
 							<li>
 								<Link href="/Portafolio">
 									<a
-										className="font-bold text-gray-900 md:hover:text-red-500"
+										className="font-bold md:hover:text-red-500"
 										href=""
 									>
 										Portafolio
@@ -93,17 +93,17 @@ export default function Navbar() {
 							<li>
 								<Link href="/Bibliografia">
 									<a
-										className="font-bold text-gray-900 md:hover:text-red-500"
+										className="font-bold md:hover:text-red-500"
 										href=""
 									>
-										Bibliografia
+										Quien soy?
 									</a>
 								</Link>
 							</li>
 							<li>
 								<Link href="/Contactame">
 									<a
-										className="font-bold text-gray-900 md:hover:text-red-500"
+										className="font-bold text-xl bg-gradient-to-r from-gray-400 to-red-400 p-2 rounded-lg md:hover:text-red-500"
 										href=""
 									>
 										Contactame
