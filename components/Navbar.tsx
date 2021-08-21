@@ -40,7 +40,7 @@ export default function Navbar() {
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
 								<li>
-									<Link href="/Portafolio">
+									<Link href="/Portfolio">
 										<a
 											className="font-bold md:hover:text-red-500"
 											href=""
@@ -50,19 +50,19 @@ export default function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/Bibliografia">
+									<Link href="/Me">
 										<a
 											className="font-bold md:hover:text-red-500"
 											href=""
 										>
-											Bibliografia
+											¿Quien soy?
 										</a>
 									</Link>
 								</li>
 								<li>
-									<Link href="/Contactame">
+									<Link href="/Contact">
 										<a
-											className="font-bold md:hover:text-red-500"
+											className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-red-500 to-gray-800 md:hover:text-red-500"
 											href=""
 										>
 											Contactame
@@ -75,13 +75,13 @@ export default function Navbar() {
 
 					{/* mobile style */}
 					<div
-						className={`flex justify-center md:hidden p-4 rounded-lg shadow-2xl bg-gray-100 ${
+						className={`flex justify-center text-center md:hidden p-4 rounded-lg shadow-2xl bg-gray-100 ${
 							isOpen ? '' : 'hidden'
 						}`}
 					>
 						<ul className="space-y-3">
 							<li>
-								<Link href="/Portafolio">
+								<Link href="/Portfolio">
 									<a
 										className="font-bold md:hover:text-red-500"
 										href=""
@@ -91,19 +91,19 @@ export default function Navbar() {
 								</Link>
 							</li>
 							<li>
-								<Link href="/Bibliografia">
+								<Link href="/Me">
 									<a
 										className="font-bold md:hover:text-red-500"
 										href=""
 									>
-										Quien soy?
+										¿Quien soy?
 									</a>
 								</Link>
 							</li>
 							<li>
-								<Link href="/Contactame">
+								<Link href="/Contact">
 									<a
-										className="font-bold text-xl bg-gradient-to-r from-gray-400 to-red-400 p-2 rounded-lg md:hover:text-red-500"
+										className=" bg-clip-text text-transparent font-bold text-xl bg-gradient-to-r from-gray-600 to-red-500 md:hover:text-red-500"
 										href=""
 									>
 										Contactame

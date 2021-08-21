@@ -11,10 +11,11 @@ export default function Home() {
 				<div className="lg:grid lg:grid-cols-2 lg:mt-10 lg:p-10 2xl:max-w-6xl 2xl:mx-auto">
 					<div className="py-10 lg:relative">
 						<div className="lg:absolute lg:inset-x-0">
-							<h1 className="text-4xl font-bold font-Comforta lg:text-5xl">
+							<h1 className=" bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600
+							 text-4xl font-bold font-Comforta lg:text-5xl">
 								Hola soy Fraum
 							</h1>
-							<h2 className="text-base font-medium text-gray-500 font-Comfortaa lg:mt-2 lg:text-lg">
+							<h2 className="text-base font-semibold text-black font-Comfortaa lg:mt-2 lg:text-lg">
 								Artista Digital y Fotografo
 							</h2>
 						</div>
@@ -32,7 +33,6 @@ export default function Home() {
 				</div>
 			</div>
 
-			{/* que se hacer */}
 		</>
 	);
 }

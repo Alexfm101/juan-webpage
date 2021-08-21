@@ -7,10 +7,11 @@ export default function Bibliografia() {
 			<section className="mt-10">
 				<div className="flex justify-center">
 					<h1 className="text-center font-Comfortaa font-bold text-3xl">
-						Bibliografia
+						¿Quien soy?
 					</h1>
 				</div>
 			</section>
+			
 			<section className="mt-10 flex flex-col md:flex-row md: max-w-2xl md:mx-auto">
 				<div className="p-2 max-w-2xl mx-auto">
 					<div className="flex flex-col items-center text-center px-4 mt-5 font-semibold text-gray-500 xl:text-xl">

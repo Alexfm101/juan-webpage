@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 					rel="stylesheet"
 				/>
 			</head>
-
 			<Component {...pageProps} />
 			<Footer />
 		</>
