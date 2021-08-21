@@ -6,19 +6,14 @@ export default function Contactame() {
 			<Navbar />
 			<section className="mt-10">
 				<div className="flex justify-center flex-col space-y-10">
-					<img
-						src="/svgs/logo.svg"
-						className=" h-24 md:h-32 lg:h-40"
-						alt=""
-					/>
-					<h1 className="text-center font-Comfortaa font-bold text-gray-700 text-3xl">
+					<h1 className="text-center font-Comfortaa font-bold text-gray-800 text-3xl">
 						Contactame
 					</h1>
 				</div>
 			</section>
 
 			{/* formulario */}
-			<section className="mt-10 md:max-w-lg md:flex md:mx-auto">
+			<section className="mt-10 md:max-w-xl md:flex md:mx-auto">
 				<form className="p-4 space-y-5">
 					<div className="space-y-5 md:flex md:flex-row md:space-y-0 md:space-x-2">
 						<input
@@ -46,7 +41,7 @@ export default function Contactame() {
 					/>
 					<div className="flex justify-center">
 						<button
-							className=" bg-gray-700 px-4 py-1 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
+							className=" bg-gray-700 px-6 py-2 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
 							type="submit"
 						>
 							Enviar
