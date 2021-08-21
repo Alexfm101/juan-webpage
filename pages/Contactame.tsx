@@ -6,7 +6,7 @@ export default function Contactame() {
 			<Navbar />
 			<section className="mt-10">
 				<div className="flex justify-center flex-col space-y-10">
-					<h1 className="text-center font-Comfortaa font-bold text-gray-800 text-3xl">
+					<h1 className="text-center font-Comfortaa font-bold text-3xl">
 						Contactame
 					</h1>
 				</div>
@@ -41,7 +41,7 @@ export default function Contactame() {
 					/>
 					<div className="flex justify-center">
 						<button
-							className=" bg-gray-700 px-6 py-2 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
+							className=" bg-gray-800 px-6 py-2 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
 							type="submit"
 						>
 							Enviar
