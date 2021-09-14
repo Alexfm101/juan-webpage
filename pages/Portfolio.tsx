@@ -4,7 +4,7 @@ export default function Portafolio() {
 	return (
 		<>
 			<Navbar />
-			Portafolio
+			portfolio
 		</>
 	);
 }

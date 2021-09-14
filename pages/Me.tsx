@@ -33,7 +33,7 @@ export default function Bibliografia() {
 							<div className="absolute z-0 mt-4 border-2 border-black w-52 h-72 lg:h-80 rounded-xl " />
 							<img
 								className="absolute rounded-xl h-72 lg:h-80 shadow-xl transform translate-x-5"
-								src="/images/test.jpg"
+								src="/images/juan.jpg"
 								alt="juan foto"
 							/>
 						</div>
