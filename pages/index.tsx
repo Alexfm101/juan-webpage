@@ -7,9 +7,9 @@ export default function Home({Images}) {
 		<>
 			<Navbar/>
 
-			<ul className="container md:grid md:grid-cols-3 md:gap-2 md:mx-auto lg:grid-cols-4 ">
+			<ul className="container md:grid md:grid-cols-3 md:gap-2 md:mx-auto lg:masonry">
 				{Images.map((id) => (
-					<li key={id} className="m-2 md:m-0">
+					<li key={id} className="m-2 md:m-0 break-inside">
 						<img className="" src={`images/portfolio/${id}.jpg`} alt="" />
 					</li>
 				))}
