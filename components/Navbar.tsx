@@ -40,16 +40,6 @@ export default function Navbar() {
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
 								<li>
-									<Link href="/Portfolio">
-										<a
-											className="font-bold md:hover:text-red-500"
-											href=""
-										>
-											Portafolio
-										</a>
-									</Link>
-								</li>
-								<li>
 									<Link href="/Me">
 										<a
 											className="font-bold md:hover:text-red-500"
@@ -80,16 +70,6 @@ export default function Navbar() {
 						}`}
 					>
 						<ul className="space-y-3">
-							<li>
-								<Link href="/Portfolio">
-									<a
-										className="font-bold md:hover:text-red-500"
-										href=""
-									>
-										Portafolio
-									</a>
-								</Link>
-							</li>
 							<li>
 								<Link href="/Me">
 									<a

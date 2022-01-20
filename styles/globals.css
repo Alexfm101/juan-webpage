@@ -4,14 +4,21 @@
 
 @layer utilities {
     @variants responsive {
-        .break-inside {
-            break-inside: avoid;
-        }
 
         .masonry {
-            display: grid;
-            grid-template-columns : repeat(4, 1fr);
-            grid-template-rows: masonry;
+          column-count: 4;
+          column-gap: 0.5em;
+        }
+
+        .item {
+          display: inline-block;
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 1023px) and (min-width: 768px) {
+          .masonry {
+            column-count: 3;
+          }
         }
     }
 }
