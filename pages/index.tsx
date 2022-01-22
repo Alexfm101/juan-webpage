@@ -1,16 +1,24 @@
 import Navbar from '../components/Navbar';
-import {getImages} from '../lib/images';
+import { getPictures } from './api/pictures';
 
-export default function Home({Images}) {
+interface IPicture {
+	large: string;
+}
+
+interface IGallery {
+	pictures: IPicture[];
+}
+
+export default function Home({ pictures }: IGallery) {
 
 	return (
 		<>
 			<Navbar/>
 
 			<ul className="container md:mx-auto md:masonry">
-				{Images.map((id) => (
-					<li key={id} className="m-2 md:m-0 md:item">
-						<img className="" src={`images/portfolio/${id}.jpg`} alt="" />
+				{pictures.map((picture, idx) => (
+					<li key={idx} className="m-2 md:m-0 md:item">
+						<img className="" src={picture.large} alt="" />
 					</li>
 				))}
 			</ul>
@@ -20,10 +28,9 @@ export default function Home({Images}) {
 }
 
 export async function getStaticProps() {
-	const Images = getImages()
+	const pictures = await getPictures("juanPhotos");
+
 	return {
-		props: {
-			Images
-		}
-	}
+		props: { pictures },
+	};
 };
