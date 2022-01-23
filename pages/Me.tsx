@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Image from 'next/image';
 
 export default function Bibliografia() {
 	return (
@@ -31,8 +32,10 @@ export default function Bibliografia() {
 					<div className="w-full">
 						<div className="relative h-72 w-72 flex justify-center mx-auto">
 							<div className="absolute z-0 mt-4 border-2 border-black w-52 h-72 lg:h-80 rounded-xl " />
-							<img
-								className="absolute rounded-xl h-72 lg:h-80 shadow-xl transform translate-x-5"
+							<Image
+								layout="fill"
+								objectFit="contain"
+								className="rounded-xl h-72 lg:h-80 shadow-xl transform translate-x-5"
 								src="/images/juan.jpg"
 								alt="juan foto"
 							/>
