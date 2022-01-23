@@ -11,7 +11,7 @@ export const getPictures = async (tag: string) => {
     
     const { resources } =  await cloudinary.v2.api.resources_by_tag(tag);
     
-    const urls = await resources.map(resource => {
+    const urls = resources.map(resource => {
         return { 
             largeUrl: resource.url,
         }
