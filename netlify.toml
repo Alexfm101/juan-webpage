@@ -1,7 +1,5 @@
 [[plugins]]
 package = "@netlify/plugin-nextjs"
-package = "netlify-plugin-cloudinary"
 
 [build]
 publish = ".next"
-cloudname = "[aleale]"
