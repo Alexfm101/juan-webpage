@@ -7,19 +7,13 @@ cloudinary.v2.config({
     secure: true,
 });
 
-export const getPictures = async (tag: string) => {
+export const getPictures = async (tag:string) => {
     
-    const { resources } =  await cloudinary.v2.api.resources_by_tag(tag);
-    
-    const urls = resources.map(resource => {
-        return { 
-            largeUrl: resource.url,
-        }
-    });
-        
-    const response = urls.map((url) => ({
-        large: url.largeUrl,
-    }));
+    const {response} = await cloudinary.v2.search.expression('resource_type:image AND tags=juanPhotos')
+    .sort_by('public_id','desc')
+    .max_results(10)
+    .execute()
+
     
     return response;
 };

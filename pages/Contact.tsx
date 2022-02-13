@@ -1,6 +1,20 @@
+import React from 'react';
 import Navbar from '../components/Navbar';
+import emailjs from '@emailjs/browser';
 
 export default function Contactame() {
+	const form = React.useRef();
+	
+	const  onSubmit = (e) => {
+		e.preventDefault();
+
+		emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, form.current, process.env.EMAIL_USER)
+		.then((response) => {
+			console.log(response.status,response.text);
+		}, (error) =>  {
+			console.log(error.text);
+		})
+	}
 	return (
 		<>
 			<Navbar />
@@ -17,46 +31,39 @@ export default function Contactame() {
 				<form 
 					className="p-4 space-y-5" 
 					name="contact" 
-					method="POST" 
-					data-netlify="true" 
-					action="/Sucess"
-					netlify-honeypot="bot-field"
-					data-netlify-recaptcha="true"
+					ref={form}
+					onSubmit={onSubmit}
 				>
 					<div className="space-y-5 md:flex md:flex-row md:space-y-0 md:space-x-2">
 						<input
 							className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-xl"
 							type="text"
 							placeholder="Nombre"
-							name="email"
-							id="name"
+							name="user_name"
+							id="user_name"
+
 						/>
 						<input
 							className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-xl"
 							type="email"
 							placeholder="correo"
-							name="email"
-							id="email"
+							name="user_email"
+							id="user_email"
 						/>
 					</div>
 					<textarea
 						className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-2xl"
-						name=""
-						id=""
+						name="message"
+						id="message"
 						cols={30}
 						rows={15}
 						placeholder="En que te puedo ayudar"
 					/>
-					<label className="hidden">
-						Dont't fill this out if you're human:
-						<input name="bot-field"/>
-					</label>
-					<div data-netilfy-recaptcha="true"></div>
-					<input type="hidden" name="form-name"  value="contact"/>
 					<div className="flex justify-center">
 						<button
 							className=" bg-gray-800 px-6 py-2 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
 							type="submit"
+							value="send"
 						>
 							Enviar
 						</button>
