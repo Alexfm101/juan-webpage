@@ -1,36 +1,49 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
-	const currentYear = new Date().getFullYear();  
+	const currentYear = new Date().getFullYear();
 
 	return (
 		<>
-			<footer className="w-full p-4">
-				<div className="flex flex-row justify-center space-x-10">
+			<footer className="p-10 mt-20 bg-gray-200 xl:mx-auto">
+				<div className="flex flex-row justify-center space-x-5">
 					<Link href="#">
-						<a href="">
-							<img
-								className="w-auto h-8 lg:h-10"
+						<a href="" className="w-10 h-6 relative lg:h-7">
+							<Image
 								src="/svgs/instagram.svg"
-								alt=""
+								width={25}
+								height={25}
+								layout="fill"
 							/>
+							{/* <img
+								className="w-auto h-6 lg:h-8"
+								src="/svgs/instagram.svg"
+								alt="instagram"
+							/> */}
 						</a>
 					</Link>
 					<Link href="#">
-						<a href="">
-							<img
-								className="w-auto h-8 lg:h-10"
+						<a href="" className="w-10 h-6 relative lg:h-7">
+							<Image
 								src="/svgs/begance.svg"
-								alt=""
+								width={25}
+								height={25}
+								layout="fill"
 							/>
+							{/* <img
+								className="w-auto h-6 lg:h-8"
+								src="/svgs/begance.svg"
+								alt="begance"
+							/> */}
 						</a>
 					</Link>
 				</div>
 				<div className="text-center mt-2 lg:text-lg">
-                	<small className="font-medium">
+					<small className="font-medium text-gray-700">
 						&copy; {currentYear} All rights reserved, Fraum
-					</small> 
-            	</div>
+					</small>
+				</div>
 			</footer>
 		</>
 	);
