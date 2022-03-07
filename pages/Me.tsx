@@ -35,7 +35,7 @@ export default function Bibliografia() {
 							<Image
 								layout="fill"
 								objectFit="contain"
-								className="rounded-xl h-72 lg:h-80 shadow-xl transform translate-x-5"
+								className="transform translate-x-5"
 								src="/images/juan.jpg"
 								alt="juan foto"
 							/>

@@ -1,18 +1,17 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-export default function Contactame() {
-	const form = React.useRef();
-	
-	const  onSubmit = (e) => {
-		e.preventDefault();
+import {Cloudinary} from "@cloudinary/url-gen";
+import { AdvancedImage } from '@cloudinary/react';
 
-		emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, form.current, process.env.EMAIL_USER)
-		.then((response) => {
-			console.log(response.status,response.text);
-		}, (error) =>  {
-			console.log(error.text);
-		})
-	}
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'aleale'
+    }
+})
+
+export default function Contactame() {
+	const picture = cld.image("juanPhotos/7");
+
 	return (
 		<>
 			<Navbar />
@@ -25,38 +24,49 @@ export default function Contactame() {
 			</section>
 
 			{/* formulario */}
-			<section className="mt-10 md:max-w-xl md:flex md:mx-auto">
+			<section className="mt-10 md:flex md:justify-center md:mx-auto">
+				<div className=" md:max-w-lg">
+					<AdvancedImage cldImg={picture} />
+				</div>
+
 				<form 
-					className="p-4 space-y-5" 
+					className="px-4 space-y-5" 
 					name="contact" 
-					ref={form}
-					onSubmit={onSubmit}
 				>
 					<div className="space-y-5 md:flex md:flex-row md:space-y-0 md:space-x-2">
-						<input
-							className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-xl"
-							type="text"
-							placeholder="Nombre"
-							name="user_name"
-							id="user_name"
+						<div>
+							<label>Nombre Completo</label>
+							<input
+								className="border w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-lg"
+								type="text"
+								placeholder="Nombre"
+								name="user_name"
+								id="user_name"
 
-						/>
-						<input
-							className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-xl"
-							type="email"
-							placeholder="correo"
-							name="user_email"
-							id="user_email"
+							/>
+						</div>
+						<div>
+							<label>Correo Electrónico</label>
+							<input
+								className="border w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-lg"
+								type="email"
+								placeholder="correo"
+								name="user_email"
+								id="user_email"
+							/>
+						</div>
+					</div>
+					<div>
+						<label htmlFor="">Mensaje</label>
+						<textarea
+							className="border w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-lg"
+							name="message"
+							id="message"
+							cols={50}
+							rows={20}
+							placeholder="En que te puedo ayudar"
 						/>
 					</div>
-					<textarea
-						className="border-2 w-full p-2 border-gray-700 rounded-lg focus:outline-none focus:border-red-400 shadow-2xl"
-						name="message"
-						id="message"
-						cols={30}
-						rows={15}
-						placeholder="En que te puedo ayudar"
-					/>
 					<div className="flex justify-center">
 						<button
 							className=" bg-gray-800 px-6 py-2 rounded-xl text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
