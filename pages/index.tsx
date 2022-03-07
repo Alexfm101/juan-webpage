@@ -1,31 +1,23 @@
 import Navbar from '../components/Navbar';
-// import { getPictures } from './api/pictures';
-// import { GetStaticProps, } from 'next';
-// import Image from 'next/image';
+import { getPictures } from './api/pictures';
+import { AdvancedImage } from '@cloudinary/react';
 
 export default function Home() {
 
+	const pictures = getPictures("juanPhotos", 40)
+
 	return (
 		<>
-			<Navbar/>
-			
-			hola
-			{/* <ul className="container md:mx-auto md:masonry">
+			<Navbar />
+
+			<ul className="container md:mx-auto md:max-w-7xl md:masonry">
 				{pictures.map((picture, id) => (
 					<li key={id} className="m-2 md:m-0 md:item">
-						<Image 
-							width={500}
-							height={500}
-							objectFit="contain"
-							src={picture.picture} 
-							priority
-							alt="photos" 
-						/>
+						<AdvancedImage cldImg={picture} />
 					</li>
 				))}
-			</ul> */}
+			</ul>
 		</>
 	);
 }
-
 

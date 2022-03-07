@@ -1,7 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import emailjs from '@emailjs/browser';
-
 export default function Contactame() {
 	const form = React.useRef();
 	

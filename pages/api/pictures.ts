@@ -1,20 +1,17 @@
-import cloudinary from 'cloudinary';
+import {Cloudinary} from '@cloudinary/url-gen';
 
-cloudinary.v2.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.API_KEY,
-    api_secret: process.env.API_SECRET,
-    secure: true,
-});
+// configurar cloudinary 
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'aleale'
+    }
+})
 
-export const getPictures = async (tag:string) => {
+// obtener imagen
+export const getPictures = (folder:string, pic_num:number) => {
     
-    const {response} = await cloudinary.v2.search.expression('resource_type:image AND tags=juanPhotos')
-    .sort_by('public_id','desc')
-    .max_results(10)
-    .execute()
+    const array = [...new Array(pic_num)]
+        .map(( _, index) => cld.image(`${folder}/${index.toString()}`))
 
-    
-    return response;
-};
-
+    return array;
+}

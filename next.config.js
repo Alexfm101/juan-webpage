@@ -4,12 +4,11 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-    swcMinify: true,    
+    swcMinify: false,
     images: {
-        domains: ['res.cloudinary.com']
+        domains: ["res.cloudinary.com"],
     }
 
 };
 
 module.exports = nextConfig;
-
