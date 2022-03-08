@@ -6,7 +6,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<header className="max-w-screen-xl mx-auto ">
+			<header className="max-w-screen-xl mx-auto">
 				<nav className=" w-full p-4 md:p-6">
 					<div className="flex justify-between">
 						<Link href="/">
@@ -24,16 +24,30 @@ export default function Navbar() {
 							className="focus:outline-none md:hidden"
 							onClick={() => setIsOpen(!isOpen)}
 						>
-							<img
-								className={`  ${isOpen ? 'hidden' : ''}`}
-								src="/svgs/menu.svg"
-								alt=""
-							/>
-							<img
+							<svg
+								className={`${isOpen ? 'hidden' : ''}`}
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 0 24 24"
+								width="24px"
+								fill="#202536"
+							>
+							    <path d="M0 0h24v24H0z" fill="none"/>
+							    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+							</svg>
+
+							<svg
 								className={`  ${isOpen ? '' : 'hidden'}`}
-								src="/svgs/close.svg"
-								alt=""
-							/>
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 0 24 24"
+								width="24px"
+								fill="#202536"
+							>
+							    <path d="M0 0h24v24H0z" fill="none"/>
+							    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+							</svg>
+
 						</button>
 
 						{/* desktop style */}
@@ -65,7 +79,7 @@ export default function Navbar() {
 
 					{/* mobile style */}
 					<div
-						className={`flex justify-center text-center md:hidden p-4 rounded-lg shadow-2xl bg-gray-100 ${
+						className={`flex justify-center text-center md:hidden px-4 py-5 rounded-sm border shadow-lg bg-gray-100 ${
 							isOpen ? '' : 'hidden'
 						}`}
 					>
@@ -73,17 +87,17 @@ export default function Navbar() {
 							<li>
 								<Link href="/Me">
 									<a
-										className="font-bold md:hover:text-red-500"
+										className="text-gray-900  text-lg font-semibold font-Roboto"
 										href=""
 									>
-										¿Quien soy?
+										Sobre mi
 									</a>
 								</Link>
 							</li>
 							<li>
 								<Link href="/Contact">
 									<a
-										className=" bg-clip-text text-transparent font-bold text-xl bg-gradient-to-r from-gray-600 to-red-500 md:hover:text-red-500"
+										className="text-gray-900 text-lg font-semibold font-Roboto"
 										href=""
 									>
 										Contactame
