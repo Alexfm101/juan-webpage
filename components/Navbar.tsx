@@ -1,23 +1,33 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<>
-			<header className="max-w-screen-xl mx-auto">
-				<nav className=" w-full p-4 md:p-6">
+			<header className=" max-w-screen-2xl mx-auto">
+				<nav className="w-full px-4 py-7 ">
 					<div className="flex justify-between">
 						<Link href="/">
-							<a href="">
-								<img
-									className={` h-10 md:h-14 lg:h-16 ${
+							<a href="" className="relative w-14 h-10 md:h-12 lg:16 " >
+								<Image
+									className={`${
+										isOpen ? 'invisible md:visible' : ''
+									} `}
+									src="/svgs/logo.svg"
+									width={25}
+									height={25}
+									layout="fill"
+								/>
+								{/* <img
+									className={` h-10 md:h-12 lg:h-14 ${
 										isOpen ? 'invisible md:visible' : ''
 									} `}
 									src="/svgs/logo.svg"
 									alt=""
-								/>
+								/> */}
 							</a>
 						</Link>
 						<button
@@ -56,17 +66,17 @@ export default function Navbar() {
 								<li>
 									<Link href="/Me">
 										<a
-											className="font-bold md:hover:text-red-500"
+											className="text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-red-500"
 											href=""
 										>
-											¿Quien soy?
+											Sobre mi
 										</a>
 									</Link>
 								</li>
 								<li>
 									<Link href="/Contact">
 										<a
-											className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-red-500 to-gray-800 md:hover:text-red-500"
+											className=" text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-red-500"
 											href=""
 										>
 											Contactame
