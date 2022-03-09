@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Bibliografia() {
 	return (
@@ -7,31 +8,17 @@ export default function Bibliografia() {
 			<Navbar />
 			<section className="mt-10">
 				<div className="flex justify-center">
-					<h1 className="text-center font-Comfortaa font-bold text-3xl">
-						¿Quien soy?
+					<h1 className="text-center font-Comfortaa font-semibold text-3xl md:text-4xl">
+						Un poco sobre mi
 					</h1>
 				</div>
 			</section>
 			
-			<section className="mt-10 flex flex-col md:flex-row md: max-w-2xl md:mx-auto">
-				<div className="p-2 max-w-2xl mx-auto">
-					<div className="flex flex-col items-center text-center px-4 mt-5 font-semibold text-gray-500 xl:text-xl">
-						<p className="font-Comfortaa">Hey! mi nombre es Juan.</p>
-						<p className="font-Comfortaa">
-							Soy Fotografo y Artista Digital.
-						</p>
-						<p className="font-Comfortaa">Vivo en Venezuela.</p>
-						<p className="font-Comfortaa">
-							Mientras estudio una licenciatura en artes, me dedico al
-							arte digital y fotografiar momentos iconicos dentro de
-							la fotografia de moda y retratos.
-					</p>
-				</div>
-			</div>
+			<section className="flex flex-col mt-10 md:flex-row md:max-w-2xl md:mx-auto lg:space-x-5 lg:mt-15">
 				<div className="">
 					<div className="w-full">
-						<div className="relative h-72 w-72 flex justify-center mx-auto">
-							<div className="absolute z-0 mt-4 border-2 border-black w-52 h-72 lg:h-80 rounded-xl " />
+						<div className="relative h-72 w-72 flex justify-center mx-auto lg:h-80">
+							<div className="absolute z-0 mt-4 border-2 border-black w-52 h-72 md:max-w-2xl lg:h-80" />
 							<Image
 								layout="fill"
 								objectFit="contain"
@@ -42,13 +29,41 @@ export default function Bibliografia() {
 						</div>
 					</div>
 				</div>
-			</section>
-			<section>
-				<div className="mt-20 flex flex-col justify-center ">
-					<p className="text-center font-Comfortaa text-xl font-bold text-red-400">
-						Sigueme en mis redes sociales
-					</p>
-					<img className="h-14 mt-10" src="/svgs/flecha.svg" alt="" />
+				<div className="pt-10 md:pt-0">
+					<div className="flex flex-col px-4 font-semibold text-gray-900 xl:text-xl">
+						<p className="font-Roboto">Hey! mi nombre es Juan.</p>
+						<p className="font-Roboto mt-2">
+							Soy Fotografo y Artista Digital.
+						</p>
+						<p className="font-Roboto mt-2">Vivo en Venezuela.</p>
+						<p className="font-Roboto mt-2">
+							Mientras estudio una licenciatura en artes, me dedico al
+							arte digital y fotografiar momentos iconicos dentro de
+							la fotografia de moda y retratos.
+						</p>
+					</div>
+					<div className="flex flex-row justify-center space-x-5 pt-5">
+						<Link href="#">
+							<a href="" className="w-10 h-8 relative">
+								<Image
+									src="/svgs/instagram.svg"
+									width={25}
+									height={25}
+									layout="fill"
+								/>
+							</a>
+						</Link>
+						<Link href="#">
+							<a href="" className="w-10 h-8 relative">
+								<Image
+									src="/svgs/begance.svg"
+									width={25}
+									height={25}
+									layout="fill"
+								/>
+							</a>
+						</Link>
+					</div>
 				</div>
 			</section>
 		</div>
