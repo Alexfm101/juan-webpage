@@ -16,11 +16,6 @@ export default function Footer() {
 								height={25}
 								layout="fill"
 							/>
-							{/* <img
-								className="w-auto h-6 lg:h-8"
-								src="/svgs/instagram.svg"
-								alt="instagram"
-							/> */}
 						</a>
 					</Link>
 					<Link href="#">
@@ -31,11 +26,6 @@ export default function Footer() {
 								height={25}
 								layout="fill"
 							/>
-							{/* <img
-								className="w-auto h-6 lg:h-8"
-								src="/svgs/begance.svg"
-								alt="begance"
-							/> */}
 						</a>
 					</Link>
 				</div>
