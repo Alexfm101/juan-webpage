@@ -7,7 +7,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<header className=" max-w-screen-2xl mx-auto">
+			<header className=" max-w-screen-xl mx-auto">
 				<nav className="w-full px-4 py-7 ">
 					<div className="flex justify-between">
 						<Link href="/">
@@ -66,7 +66,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Me">
 										<a
-											className="text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-red-500"
+											className="text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-gray-300"
 											href=""
 										>
 											Sobre mi
@@ -76,7 +76,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Contact">
 										<a
-											className=" text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-red-500"
+											className=" text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-gray-300"
 											href=""
 										>
 											Contactame
