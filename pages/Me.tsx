@@ -8,7 +8,7 @@ export default function Bibliografia() {
 			<Navbar />
 			<section className="mt-10">
 				<div className="flex justify-center">
-					<h1 className="text-center font-Comfortaa font-semibold text-3xl md:text-4xl">
+					<h1 className="text-center font-Comfortaa text-gray-900 font-semibold text-3xl md:text-4xl">
 						Un poco sobre mi
 					</h1>
 				</div>
@@ -30,7 +30,7 @@ export default function Bibliografia() {
 					</div>
 				</div>
 				<div className="pt-10 md:pt-0">
-					<div className="flex flex-col px-4 font-semibold text-gray-900 xl:text-xl">
+					<div className="flex flex-col px-4 font-semibold  xl:text-xl">
 						<p className="font-Roboto">Hey! mi nombre es Juan.</p>
 						<p className="font-Roboto mt-2">
 							Soy Fotografo y Artista Digital.
