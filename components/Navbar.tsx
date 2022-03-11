@@ -21,13 +21,6 @@ export default function Navbar() {
 									height={25}
 									layout="fill"
 								/>
-								{/* <img
-									className={` h-10 md:h-12 lg:h-14 ${
-										isOpen ? 'invisible md:visible' : ''
-									} `}
-									src="/svgs/logo.svg"
-									alt=""
-								/> */}
 							</a>
 						</Link>
 						<button
@@ -66,7 +59,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Me">
 										<a
-											className="text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-gray-300"
+											className="text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
 											href=""
 										>
 											Sobre mi
@@ -76,7 +69,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Contact">
 										<a
-											className=" text-gray-900  lg:text-lg font-semibold font-Roboto hover:text-gray-300"
+											className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
 											href=""
 										>
 											Contactame
@@ -89,7 +82,7 @@ export default function Navbar() {
 
 					{/* mobile style */}
 					<div
-						className={`flex justify-center text-center md:hidden px-4 py-5 rounded-sm border shadow-lg bg-gray-100 ${
+						className={`flex justify-center text-center md:hidden px-4 py-5 rounded-sm border bg-gray-50 shadow-lg  ${
 							isOpen ? '' : 'hidden'
 						}`}
 					>
@@ -97,7 +90,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Me">
 									<a
-										className="text-gray-900  text-lg font-semibold font-Roboto"
+										className="text-gray-900  text-lg font-medium font-Confortaa"
 										href=""
 									>
 										Sobre mi
@@ -107,7 +100,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Contact">
 									<a
-										className="text-gray-900 text-lg font-semibold font-Roboto"
+										className="text-gray-900 text-lg font-medium font-Confortaa"
 										href=""
 									>
 										Contactame
