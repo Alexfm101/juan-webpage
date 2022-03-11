@@ -10,7 +10,7 @@ export default function Home() {
 		<>
 			<Navbar />
 
-			<ul className="container md:mx-auto md:max-w-7xl md:masonry">
+			<ul className=" mt-10 container md:mx-auto md:max-w-7xl md:masonry">
 				{pictures.map((picture, id) => (
 					<li key={id} className="m-2 md:m-0 md:item">
 						<AdvancedImage cldImg={picture} />
