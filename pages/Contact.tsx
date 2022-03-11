@@ -12,6 +12,14 @@ const cld = new Cloudinary({
 export default function Contactame() {
 	const picture = cld.image("juanPhotos/7");
 
+	const [user_name, setUser_name] = React.useState("");
+	const [user_email, setUser_email] = React.useState("");
+	const [message, setMessage] = React.useState("");
+
+	const handleSubmit = () => {
+		
+	}
+
 	return (
 		<>
 			<Navbar />
@@ -31,6 +39,7 @@ export default function Contactame() {
 				<form 
 					className="px-4 space-y-5 " 
 					name="contact" 
+					onSubmit={handleSubmit}
 				>
 					<div className="space-y-5 md:flex md:flex-row md:space-y-0 md:space-x-2">
 						<div>
@@ -41,6 +50,10 @@ export default function Contactame() {
 								placeholder="Juan Augusto"
 								name="user_name"
 								id="user_name"
+								value={user_name}
+								onChange={(e) => {
+									setUser_name(e.target.value);
+								}}
 
 							/>
 						</div>
@@ -52,6 +65,11 @@ export default function Contactame() {
 								placeholder="correo@gmail.com"
 								name="user_email"
 								id="user_email"
+								value={user_email}
+								onChange={(e) => {
+									setUser_email(e.target.value);
+								}}
+
 							/>
 						</div>
 					</div>
@@ -64,6 +82,11 @@ export default function Contactame() {
 							cols={50}
 							rows={10}
 							placeholder="En que te puedo ayudar"
+							value={message}
+							onChange={(e) => {
+								setMessage(e.target.value);
+							}}
+
 						/>
 					</div>
 					<div className="flex justify-center">
