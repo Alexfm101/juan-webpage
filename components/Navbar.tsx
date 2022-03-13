@@ -17,8 +17,6 @@ export default function Navbar() {
 										isOpen ? 'invisible md:visible' : ''
 									} `}
 									src="/svgs/logo.svg"
-									width={25}
-									height={25}
 									layout="fill"
 								/>
 							</a>
@@ -56,6 +54,16 @@ export default function Navbar() {
 						{/* desktop style */}
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
+								<li>
+									<Link href="/Portfolio">
+										<a
+											className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
+											href=""
+										>
+											Portafolio
+										</a>
+									</Link>
+								</li>
 								<li>
 									<Link href="/Me">
 										<a
