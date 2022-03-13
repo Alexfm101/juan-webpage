@@ -10,6 +10,7 @@
 	"dependencies": {
 		"@cloudinary/react": "^1.1.0",
 		"@cloudinary/url-gen": "^1.6.0",
+		"@sendgrid/mail": "^7.6.2",
 		"next": "^12.0.8",
 		"prettier": "^2.3.0",
 		"react": "^17.0.2",

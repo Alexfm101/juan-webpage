@@ -12,13 +12,67 @@ const cld = new Cloudinary({
 export default function Contactame() {
 	const picture = cld.image("juanPhotos/7");
 
-	const [user_name, setUser_name] = React.useState("");
-	const [user_email, setUser_email] = React.useState("");
-	const [message, setMessage] = React.useState("");
 
-	const handleSubmit = () => {
-		
-	}
+	const [status, setStatus] = React.useState({
+        submitted: false,
+        submitting: false,
+        info: { error: false, msg: null },
+    });
+
+    const [inputs, setInputs] = React.useState({
+		name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleResponse = (status, msg) => {
+        if (status === 200) {
+            setStatus({
+                submitted: true,
+                submitting: false,
+                info: { error: false, msg: msg },
+            });
+            setInputs({
+				name: '',
+                email: '',
+                message: '',
+            });
+        } else {
+            setStatus({
+				submitted: false,
+				submitting: false,
+                info: { error: true, msg: msg },
+            });
+        }
+    };
+
+    const handleOnChange = (e) => {
+        e.persist();
+        setInputs((prev) => ({
+            ...prev,
+            [e.target.id]: e.target.value,
+        }));
+        setStatus({
+            submitted: false,
+            submitting: false,
+            info: { error: false, msg: null },
+        });
+    };
+
+    const handleOnSubmit = async (e) => {
+        e.preventDefault();
+        setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+        const res = await fetch('/api/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(inputs),
+        });
+        const text = await res.text();
+        handleResponse(res.status, text);
+    };
+
 
 	return (
 		<>
@@ -39,37 +93,33 @@ export default function Contactame() {
 				<form 
 					className="px-4 space-y-5 " 
 					name="contact" 
-					onSubmit={handleSubmit}
+					onSubmit={handleOnSubmit}
 				>
 					<div className="space-y-5 md:flex md:flex-row md:space-y-0 md:space-x-2">
 						<div>
-							<label>Nombre Completo</label>
+							<label htmlFor='name'>Nombre Completo</label>
 							<input
 								className="border border-gray-900 w-full p-2 focus:outline-none focus:border-red-400 rounded-sm"
 								type="text"
 								placeholder="Juan Augusto"
-								name="user_name"
-								id="user_name"
-								value={user_name}
-								onChange={(e) => {
-									setUser_name(e.target.value);
-								}}
-
+								name="name"
+								id="name"
+								onChange={handleOnChange}
+								required
+								value={inputs.name}
 							/>
 						</div>
 						<div>
-							<label>Correo Electrónico</label>
+							<label htmlFor='email'>Correo Electrónico</label>
 							<input
 								className="border w-full p-2 border-gray-900 rounded-sm focus:outline-none focus:border-red-400"
 								type="email"
 								placeholder="correo@gmail.com"
-								name="user_email"
-								id="user_email"
-								value={user_email}
-								onChange={(e) => {
-									setUser_email(e.target.value);
-								}}
-
+								name="email"
+								id="email"
+								onChange={handleOnChange}
+								required
+								value={inputs.email}
 							/>
 						</div>
 					</div>
@@ -82,21 +132,37 @@ export default function Contactame() {
 							cols={50}
 							rows={10}
 							placeholder="En que te puedo ayudar"
-							value={message}
-							onChange={(e) => {
-								setMessage(e.target.value);
-							}}
-
+							onChange={handleOnChange}
+							required
+							value={inputs.message}
 						/>
 					</div>
 					<div className="flex justify-center">
 						<button
-							className=" bg-gray-900 px-6 py-2 rounded-sm text-xl text-white font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
+							className=" 
+								bg-gray-900 px-6 py-2 rounded-sm text-xl text-white 
+								font-Comfortaa font-bold focus:outline-none focus:bg-red-400"
 							type="submit"
 							value="send"
+							disabled={status.submitting}
 						>
-							Enviar
+							{!status.submitting
+								? !status.submitted
+									? 'Submit'
+									: 'Submitted'
+								: 'Submitting...'
+							}						
 						</button>
+						<div className="mt-4">
+							{status.info.error && (
+								<div className="text-red-400">
+									Error: {status.info.msg}
+								</div>
+							)}
+							{!status.info.error && status.info.msg && (
+								<div className="text-green-500">{status.info.msg}</div>
+							)}
+						</div>
 					</div>
 				</form>
 			</section>
