@@ -148,9 +148,9 @@ export default function Contactame() {
 						>
 							{!status.submitting
 								? !status.submitted
-									? 'Submit'
-									: 'Submitted'
-								: 'Submitting...'
+									? 'Enviar'
+									: 'Enviado'
+								: 'Enviando...'
 							}						
 						</button>
 						<div className="mt-4">

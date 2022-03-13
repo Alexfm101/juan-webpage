@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [portfolio, setPortfolio] = useState(false);
 
 	return (
 		<>
@@ -55,14 +56,38 @@ export default function Navbar() {
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
 								<li>
-									<Link href="/Portfolio">
-										<a
-											className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
-											href=""
+										<button
+											className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400 focus:outline-none"
+											onClick={() => setPortfolio(!portfolio)}
 										>
 											Portafolio
-										</a>
-									</Link>
+										</button>
+										<ul className={`${ portfolio? '' : 'hidden'}`}>
+											<li> 
+												<Link href="/portfolio/Test1">
+													<a href="" className='text-gray-600  lg:text-base 
+														font-Confortaa hover:text-indigo-600'>
+														test1
+													</a>
+												</Link>
+											</li>
+											<li><
+												Link href="/portfolio/Test2">
+													<a href="" className='text-gray-600  lg:text-medium 
+														font-Confortaa hover:text-indigo-600'>
+															test2
+													</a>
+												</Link>
+											</li>
+											<li>
+												<Link href="/portfolio/Test3">
+													<a href="" className='text-gray-600  lg:text-medium 
+														font-Confortaa hover:text-indigo-600'>
+														test 3
+													</a>
+												</Link>
+											</li>
+										</ul>
 								</li>
 								<li>
 									<Link href="/Me">
@@ -95,6 +120,40 @@ export default function Navbar() {
 						}`}
 					>
 						<ul className="space-y-3">
+							<li>
+								<button
+									className=" text-gray-900  text-lg font-medium font-Confortaa hover:text-red-400 focus:outline-none"
+									onClick={() => setPortfolio(!portfolio)}
+								>
+									Portafolio
+								</button>
+								<ul className={`${ portfolio? '' : 'hidden'}`}>
+									<li> 
+										<Link href="/portfolio/Test1">
+											<a href="" className='text-gray-600  lg:text-base 
+												font-Confortaa hover:text-indigo-600'>
+												test1
+											</a>
+										</Link>
+									</li>
+									<li><
+										Link href="/portfolio/Test2">
+											<a href="" className='text-gray-600  lg:text-medium 
+												font-Confortaa hover:text-indigo-600'>
+													test2
+											</a>
+										</Link>
+									</li>
+									<li>
+										<Link href="/portfolio/Test3">
+											<a href="" className='text-gray-600  lg:text-medium 
+												font-Confortaa hover:text-indigo-600'>
+												test 3
+											</a>
+										</Link>
+									</li>
+								</ul>
+							</li>
 							<li>
 								<Link href="/Me">
 									<a
