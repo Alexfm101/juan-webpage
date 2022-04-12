@@ -43,7 +43,7 @@ export default function Bibliografia() {
 						</p>
 					</div>
 					<div className="flex flex-row justify-center space-x-5 pt-5">
-						<Link href="#">
+						<Link href="https://www.instagram.com/_fraum_/">
 							<a href="" className="w-10 h-8 relative">
 								<Image
 									src="/svgs/instagram.svg"
@@ -53,7 +53,7 @@ export default function Bibliografia() {
 								/>
 							</a>
 						</Link>
-						<Link href="#">
+						{/* <Link href="#">
 							<a href="" className="w-10 h-8 relative">
 								<Image
 									src="/svgs/begance.svg"
@@ -62,7 +62,7 @@ export default function Bibliografia() {
 									layout="fill"
 								/>
 							</a>
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</section>

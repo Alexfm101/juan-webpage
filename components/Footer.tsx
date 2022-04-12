@@ -8,7 +8,7 @@ export default function Footer() {
 		<>
 			<footer className="p-10 mt-20 xl:mx-auto">
 				<div className="flex flex-row justify-center space-x-5">
-					<Link href="#">
+					<Link href="https://www.instagram.com/_fraum_/">
 						<a href="" className="w-10 h-6 relative lg:h-7">
 							<Image
 								src="/svgs/instagram.svg"
@@ -16,14 +16,14 @@ export default function Footer() {
 							/>
 						</a>
 					</Link>
-					<Link href="#">
+					{/* <Link href="#">
 						<a href="" className="w-10 h-6 relative lg:h-7">
 							<Image
 								src="/svgs/begance.svg"
 								layout="fill"
 							/>
 						</a>
-					</Link>
+					</Link> */}
 				</div>
 				<div className="text-center mt-2 lg:text-lg">
 					<small className="font-medium text-black">
