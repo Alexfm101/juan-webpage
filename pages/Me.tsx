@@ -39,7 +39,7 @@ export default function Bibliografia() {
 						<p className="font-Roboto mt-2">
 							Mientras estudio una licenciatura en artes, me dedico al
 							arte digital y fotografiar momentos iconicos dentro de
-							la fotografia de moda y retratos.
+							la fotografia callejera y retratos.
 						</p>
 					</div>
 					<div className="flex flex-row justify-center space-x-5 pt-5">

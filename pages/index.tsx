@@ -5,7 +5,7 @@ import { AdvancedImage } from '@cloudinary/react';
 
 export default function Home() {
 
-	const pictures = getPictures("juanPhotos", 40);
+	const pictures = getPictures("home", 20);
 	const [open, setOpen] = React.useState(false);
 	const [picture, setPicture] = React.useState();
 
@@ -34,6 +34,7 @@ export default function Home() {
 								height="24px"
 								viewBox="0 0 24 24"
 								width="24px"
+
 								fill="#FFFFFF"
 							>
 							    <path d="M0 0h24v24H0z" fill="none"/>

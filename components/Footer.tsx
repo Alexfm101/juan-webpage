@@ -17,7 +17,7 @@ export default function Footer() {
 						</a>
 					</Link>
 					{/* <Link href="#">
-						<a href="" className="w-10 h-6 relative lg:h-7">
+					<a href="" className="w-10 h-6 relative lg:h-7">
 							<Image
 								src="/svgs/begance.svg"
 								layout="fill"

@@ -11,7 +11,7 @@ const cld = new Cloudinary({
 export const getPictures = (folder:string, pic_num:number) => {
     
     const array = [...new Array(pic_num)]
-        .map(( _, index) => cld.image(`${folder}/${index.toString()}`))
+        .map(( _, index) => cld.image(`${folder}/${index.toString()}`).quality(50))
 
     return array;
 }
