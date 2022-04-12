@@ -38,11 +38,11 @@ export default function Bibliografia() {
 						<p className="font-Roboto mt-2">Vivo en Venezuela.</p>
 						<p className="font-Roboto mt-2">
 							Mientras estudio una licenciatura en artes, me dedico al
-							arte digital y fotografiar momentos iconicos dentro de
+							arte digital y fotografiar momentos icónicos dentro de
 							la fotografia callejera y retratos.
 						</p>
 					</div>
-					<div className="flex flex-row justify-center space-x-5 pt-5">
+					{/* <div className="flex flex-row justify-center space-x-5 pt-5">
 						<Link href="https://www.instagram.com/_fraum_/">
 							<a href="" className="w-10 h-8 relative">
 								<Image
@@ -53,7 +53,7 @@ export default function Bibliografia() {
 								/>
 							</a>
 						</Link>
-						{/* <Link href="#">
+						<Link href="#">
 							<a href="" className="w-10 h-8 relative">
 								<Image
 									src="/svgs/begance.svg"
@@ -62,8 +62,8 @@ export default function Bibliografia() {
 									layout="fill"
 								/>
 							</a>
-						</Link> */}
-					</div>
+						</Link>
+					</div> */}
 				</div>
 			</section>
 		</div>
