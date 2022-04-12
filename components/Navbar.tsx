@@ -55,7 +55,7 @@ export default function Navbar() {
 						{/* desktop style */}
 						<div className="hidden md:flex">
 							<ul className="md:flex md:flex-row md:my-auto md:space-x-5">
-								<li>
+								{/* <li>
 									<button
 										className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400 focus:outline-none"
 										onClick={() => setPortfolio(!portfolio)}
@@ -88,11 +88,11 @@ export default function Navbar() {
 											</Link>
 										</li>
 									</ul>
-								</li>
+								</li> */}
 								<li>
 									<Link href="/Me">
 										<a
-											className="text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
+											className="text-black  lg:text-lg font-medium font-Confortaa hover:text-red-400"
 											href=""
 										>
 											Sobre mi
@@ -102,7 +102,7 @@ export default function Navbar() {
 								<li>
 									<Link href="/Contact">
 										<a
-											className=" text-gray-900  lg:text-lg font-medium font-Confortaa hover:text-red-400"
+											className=" text-black  lg:text-lg font-medium font-Confortaa hover:text-red-400"
 											href=""
 										>
 											Contactame
@@ -120,7 +120,7 @@ export default function Navbar() {
 						}`}
 					>
 						<ul className="space-y-3">
-							<li>
+							{/* <li>
 								<button
 									className=" text-gray-900  text-lg font-medium font-Confortaa hover:text-red-400 focus:outline-none"
 									onClick={() => setPortfolio(!portfolio)}
@@ -153,11 +153,11 @@ export default function Navbar() {
 										</Link>
 									</li>
 								</ul>
-							</li>
+							</li> */}
 							<li>
 								<Link href="/Me">
 									<a
-										className="text-gray-900  text-lg font-medium font-Confortaa"
+										className="text-black  text-lg font-medium font-Confortaa"
 										href=""
 									>
 										Sobre mi
@@ -167,7 +167,7 @@ export default function Navbar() {
 							<li>
 								<Link href="/Contact">
 									<a
-										className="text-gray-900 text-lg font-medium font-Confortaa"
+										className="text-black text-lg font-medium font-Confortaa"
 										href=""
 									>
 										Contactame

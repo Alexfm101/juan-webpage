@@ -26,7 +26,7 @@ export default function Footer() {
 					</Link>
 				</div>
 				<div className="text-center mt-2 lg:text-lg">
-					<small className="font-medium text-gray-900">
+					<small className="font-medium text-black">
 						&copy; {currentYear} All rights reserved, Fraum
 					</small>
 				</div>

@@ -2,18 +2,18 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import { getPictures } from './api/pictures';
 import { AdvancedImage } from '@cloudinary/react';
-import Image from 'next/image';
 
 export default function Home() {
 
-	const pictures = getPictures("juanPhotos", 40)
+	const pictures = getPictures("juanPhotos", 40);
 	const [open, setOpen] = React.useState(false);
 	const [picture, setPicture] = React.useState();
 
 	const handleOnClick = (e) => {
 		setPicture(e.target.src);
 		setOpen(true);
-	}
+	};
+
 	return (
 		<>
 			<Navbar />
@@ -41,9 +41,7 @@ export default function Home() {
 							</svg>	
 					</button>
 
-					<div className="relative top-20 mx-auto w-96 h-96">
-						<Image src={picture} layout="fill" objectFit='cover' alt='portafolio'/>
-					</div>
+					<img src={picture} className="relative px-5 md:py-5 md:px-60" alt="portfolio" />
 				</div>
 			)}
 		</>
