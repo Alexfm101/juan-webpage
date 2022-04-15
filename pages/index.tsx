@@ -4,13 +4,11 @@ import Navbar from '../components/Navbar';
 import { getPictures } from './api/pictures';
 import { AdvancedImage } from '@cloudinary/react';
 
-
-
 export default function Home() {
 
   	const [pictures, setPictures] = React.useState([]);
 	const [open, setOpen] = React.useState(false);
-	const [picture, setPicture] = React.useState();
+	const [image, setImage] = React.useState();
 
 	React.useEffect(() => {
 		const fetchdata = async () => {
@@ -20,10 +18,9 @@ export default function Home() {
 
 		fetchdata().catch(console.error);
 	}, []);
- 
 
 	const handleOnClick = (e) => {
-		setPicture(e.target.src);
+		setImage(e.target.src);
 		setOpen(true);
 	};
 
@@ -63,7 +60,7 @@ export default function Home() {
 							</svg>
 						</button>
 
-						<img src={picture} className="relative px-5 md:py-5 md:px-60" alt="portfolio" />
+						<img src={image} className="relative px-5 md:py-5 md:px-60" alt="portfolio" />
 					</div>
 				)}
 			</div>
