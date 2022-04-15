@@ -1,8 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Footer from '../components/Footer';
 
 export default function Document() {
     return (
-        <Html>
+        <Html lang="es">
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
@@ -15,6 +16,7 @@ export default function Document() {
             <body>
                 <Main/>
                 <NextScript/>
+                <Footer/>
             </body>
         </Html>
     )
