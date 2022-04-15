@@ -1,4 +1,5 @@
 import {Cloudinary} from '@cloudinary/url-gen';
+import { quality } from '@cloudinary/url-gen/actions/delivery';
 
 // configurar cloudinary 
 const cld = new Cloudinary({
@@ -11,7 +12,7 @@ const cld = new Cloudinary({
 export const getPictures = (folder:string, pic_num:number) => {
     
     const array = [...new Array(pic_num)]
-        .map(( _, index) => cld.image(`${folder}/${index.toString()}`).quality(30))
+        .map(( _, index) => cld.image(`${folder}/${index.toString()}`).delivery(quality('auto:low')))
 
     return array;
 }

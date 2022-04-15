@@ -14,6 +14,7 @@ const cld = new Cloudinary({
 export default function Contactame() {
 	const picture = cld.image("juanPhotos/7");
 
+	picture.quality(50);
 
 	const [status, setStatus] = React.useState({
         submitted: false,
