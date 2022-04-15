@@ -19,6 +19,7 @@ export default function Navbar() {
 									} `}
 									src="/svgs/logo.svg"
 									layout="fill"
+									alt="home"
 								/>
 							</a>
 						</Link>

@@ -10,7 +10,7 @@ export default function Footer() {
 				<div className="flex flex-row justify-center space-x-5">
 					<Link href="https://www.instagram.com/_fraum_/">
 						<a href="https://www.instagram.com/_fraum_/" className="relative w-10 h-6 lg:h-7">
-							<Image src="/svgs/instagram.svg" layout="fill"/>
+							<Image src="/svgs/instagram.svg" layout="fill" alt="instagram"/>
 						</a>
 					</Link>
 				</div>

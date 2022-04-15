@@ -30,9 +30,9 @@ export default function Home() {
 			<Head>
 				<title>Home | Fraum</title>
 				<meta name="description" property="og:description" content="Juan Fraudita - Fotografía" />
-				<meta property="og:title" content="Home | Fraum" />
-				<meta property="og:url" content="https://fraum.vercel.app/" />
-				<meta property="og:type" content="website" />
+				<meta name="title" property="og:title" content="Home | Fraum" />
+				<meta name="url" property="og:url" content="https://fraum.vercel.app/" />
+				<meta name="type" property="og:type" content="website" />
 			</Head>
 
 			<div className='relative overflow-hidden'>
@@ -43,7 +43,8 @@ export default function Home() {
 							<AdvancedImage 
 								cldImg={picture} 
 								className="hover:opacity-50"
-								plugins={[ lazyload(), placeholder({mode: 'blur'}) ]}  />
+								plugins={[ lazyload(), placeholder({mode: 'blur'}) ]}  
+								alt="portfolio" />
 						</li>
 					))}
 				</ul>
@@ -64,7 +65,7 @@ export default function Home() {
 							</svg>
 						</button>
 
-						<img src={image} className="relative px-5 md:py-5 md:px-60" alt="portfolio" />
+						<img src={image} className="relative px-5 md:py-5 md:px-60" alt="picture portfolio" />
 					</div>
 				)}
 			</div>

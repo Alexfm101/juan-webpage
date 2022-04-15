@@ -10,9 +10,9 @@ export default function Bibliografia() {
 			<Head>
 				<title>Sobre Mi | Fraum</title>
 				<meta name="description" property="og:description" content="Juan Fraudita - un poco sobre mi" />
-				<meta property="og:title" content="Sobre Mi | Fraum" />
-				<meta property="og:url" content="https://fraum.vercel.app/Me" />
-				<meta property="og:type" content="website" />
+				<meta name="title" property="og:title" content="Sobre Mi | Fraum" />
+				<meta name="url" property="og:url" content="https://fraum.vercel.app/Me" />
+				<meta name="type" property="og:type" content="website" />
 			</Head>
 
 			<div>

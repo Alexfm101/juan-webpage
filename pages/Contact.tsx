@@ -83,9 +83,9 @@ export default function Contactame() {
 			<Head>
 				<title>Contactame | Fraum</title>
 				<meta name="description" property="og:description" content="Juan Fraudita - Contactame" />
-				<meta property="og:title" content="Contactame | Fraum"/>
-				<meta property="og:url" content="https://fraum.vercel.app/Contact"/>
-				<meta property="og:type" content="website"/>
+				<meta name="title" property="og:title" content="Contactame | Fraum"/>
+				<meta name="url" property="og:url" content="https://fraum.vercel.app/Contact"/>
+				<meta name="type" property="og:type" content="website"/>
 			</Head>
 			<div>
 				<Navbar />
@@ -100,7 +100,7 @@ export default function Contactame() {
 				{/* formulario */}
 				<section className="flex flex-col mt-5 md:flex-row md:max-w-6xl md:mx-auto lg:space-x-5 lg:mt-15">
 
-					<AdvancedImage cldImg={picture} className="p-4 m-4 md:w-96 md:h-96 md:p-0 md:pl-4 lg:h-auto" />
+					<AdvancedImage cldImg={picture} className="p-4 m-4 md:w-96 md:h-96 md:p-0 md:pl-4 lg:h-auto" alt="avila"/>
 
 					<form 
 						className="px-4 space-y-5 " 
