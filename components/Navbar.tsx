@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -7,14 +8,15 @@ export default function Navbar() {
 	return (
 		<>
 			<header className=" max-w-screen-xl mx-auto">
-				<nav className="w-full px-4 py-7 lg:px-0">
+				<nav className="w-full px-4 py-7">
 					<div className="flex justify-between">
 						<Link href="/">
-							<a href="" className="relative w-12 lg:w-16" >
-								<img
+							<a href="" className="relative w-12 h-10 md:w-14 md:h-12 lg:w-16" >
+								<Image
 									className={`${isOpen ? 'invisible md:visible' : ''
 										} `}
 									src="/svgs/logo.svg"
+									layout='fill'
 								/>
 							</a>
 						</Link>

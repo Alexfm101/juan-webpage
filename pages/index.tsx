@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import { getPictures } from './api/pictures';
 import { AdvancedImage } from '@cloudinary/react';
+import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -36,7 +37,7 @@ export default function Home() {
 
 			<div className='relative overflow-hidden'>
 				<Navbar />
-				<ul className=" mt-10 container md:mx-auto md:max-w-7xl md:masonry">
+				<ul className=" mt-10 container md:px-2 md:mx-auto md:max-w-7xl md:masonry">
 					{pictures.map((picture, id) => (
 						<li onClick={handleOnClick} key={id} className="m-2 md:m-0 md:item">
 							<AdvancedImage loading="lazy" cldImg={picture} className="hover:opacity-50" />
@@ -64,6 +65,7 @@ export default function Home() {
 					</div>
 				)}
 			</div>
+			<Footer/>
 		</>
 	);
 }

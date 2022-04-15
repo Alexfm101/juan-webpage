@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage } from '@cloudinary/react';
+import Footer from '../components/Footer';
 
 const cld = new Cloudinary({
     cloud: {
@@ -177,6 +178,7 @@ export default function Contactame() {
 					</form>
 				</section>
 			</div>
+			<Footer/>
 		</>
 	);
 }

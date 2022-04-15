@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 // import Link from 'next/link';
 
 export default function Bibliografia() {
@@ -78,6 +79,7 @@ export default function Bibliografia() {
 					</div>
 				</section>
 			</div>
+			<Footer/>
 		</>
 	);
 }
