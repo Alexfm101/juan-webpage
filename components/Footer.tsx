@@ -13,14 +13,6 @@ export default function Footer() {
 							<Image src="/svgs/instagram.svg" layout="fill"/>
 						</a>
 					</Link>
-					{/* <Link href="#">
-					<a href="" className="w-10 h-6 relative lg:h-7">
-							<Image
-								src="/svgs/begance.svg"
-								layout="fill"
-							/>
-						</a>
-					</Link> */}
 				</div>
 				<div className="text-center mt-2 lg:text-lg">
 					<small className="font-medium text-black">

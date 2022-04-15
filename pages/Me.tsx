@@ -2,7 +2,6 @@ import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Head from 'next/head';
 import Footer from '../components/Footer';
-// import Link from 'next/link';
 
 export default function Bibliografia() {
 	return (
@@ -54,28 +53,6 @@ export default function Bibliografia() {
 								la fotografia callejera y retratos.
 							</p>
 						</div>
-						{/* <div className="flex flex-row justify-center space-x-5 pt-5">
-							<Link href="https://www.instagram.com/_fraum_/">
-								<a href="" className="w-10 h-8 relative">
-									<Image
-										src="/svgs/instagram.svg"
-										width={25}
-										height={25}
-										layout="fill"
-									/>
-								</a>
-							</Link>
-							<Link href="#">
-								<a href="" className="w-10 h-8 relative">
-									<Image
-										src="/svgs/begance.svg"
-										width={25}
-										height={25}
-										layout="fill"
-									/>
-								</a>
-							</Link>
-						</div> */}
 					</div>
 				</section>
 			</div>
