@@ -114,7 +114,7 @@ export default function Contactame() {
 							<input
 								className="border w-full p-2 border-gray-900 rounded-sm focus:outline-none focus:border-red-400"
 								type="email"
-								placeholder="correo@gmail.com"
+								placeholder="Correo@gmail.com"
 								name="email"
 								id="email"
 								onChange={handleOnChange}
