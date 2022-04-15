@@ -39,7 +39,7 @@ export default function Home() {
 				<ul className=" mt-10 container md:mx-auto md:max-w-7xl md:masonry">
 					{pictures.map((picture, id) => (
 						<li onClick={handleOnClick} key={id} className="m-2 md:m-0 md:item">
-							<AdvancedImage cldImg={picture} className="hover:opacity-50" />
+							<AdvancedImage loading="lazy" cldImg={picture} className="hover:opacity-50" />
 						</li>
 					))}
 				</ul>

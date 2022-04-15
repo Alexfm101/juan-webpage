@@ -7,7 +7,7 @@ export default function Navbar() {
 	return (
 		<>
 			<header className=" max-w-screen-xl mx-auto">
-				<nav className="w-full px-2 py-7 lg:px-0">
+				<nav className="w-full px-4 py-7 lg:px-0">
 					<div className="flex justify-between">
 						<Link href="/">
 							<a href="" className="relative w-12 lg:w-16" >

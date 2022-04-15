@@ -8,9 +8,9 @@ const cld = new Cloudinary({
 })
 
 // obtener imagen
-export const getPictures =  (folder:string, pic_num:number) => {
+export const getPictures = (folder:string, pic_num:number) => {
     
-    const array =  [...new Array(pic_num)]
+    const array = [...new Array(pic_num)]
         .map(( _, index) => cld.image(`${folder}/${index.toString()}`).quality(30))
 
     return array;
